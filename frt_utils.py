@@ -62,7 +62,7 @@ def compute_quality(image_array):
     gray = cv2.cvtColor(image_array, cv2.COLOR_RGB2GRAY)
     variance = cv2.Laplacian(gray, cv2.CV_64F).var()
     # Normalize: empirically, variance > 1000 is sharp.
-    max_expected_variance = 100.0
+    max_expected_variance = 50.0
     quality = min(variance / max_expected_variance, 1.0)
     return float(quality)
 
