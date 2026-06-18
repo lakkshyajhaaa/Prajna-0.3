@@ -14,3 +14,6 @@ plotly
 onnxruntime
 pytest
 pytest-mock
+fastapi
+uvicorn
+python-multipart
