@@ -23,7 +23,6 @@ import shutil
 from datetime import datetime, timezone
 from PIL import Image
 from facenet_pytorch import MTCNN, InceptionResnetV1
-import streamlit as st
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
@@ -35,7 +34,6 @@ DATABASE_DIR = os.path.join(os.path.dirname(__file__), "database")
 # Model loading — UNCHANGED from 0.1
 # ---------------------------------------------------------------------------
 
-@st.cache_resource
 def load_models():
     mtcnn_model = MTCNN(keep_all=True, device=device)   # keep_all=True for multi-face
     resnet_model = InceptionResnetV1(pretrained='vggface2').eval().to(device)
@@ -48,7 +46,6 @@ def load_models():
 
 import kagglehub
 
-@st.cache_data
 def fetch_and_load_database(num_classes=None, samples_per_class=1):
     """
     Downloads Kaggle face dataset and builds in-memory embedding database.
@@ -68,7 +65,7 @@ def fetch_and_load_database(num_classes=None, samples_per_class=1):
                     break
             shutil.copytree(target_folder, local_dataset_path, dirs_exist_ok=True)
         except Exception as e:
-            st.error(f"Failed to download dataset: {e}")
+            print(f"Failed to download dataset: {e}")
             return {}
 
     target_folder = local_dataset_path
