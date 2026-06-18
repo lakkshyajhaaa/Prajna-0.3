@@ -1,4 +1,4 @@
-# Prajna Framework (प्रज्ञा) 0.3
+# Prajna Framework (प्रज्ञा) 0.2
 ## Zero-Knowledge, Hierarchical Biometric Inference
 
 > *"AI should not only make predictions. It should decide whether its predictions deserve to be trusted — and how much intelligence to spend before deciding, all while rigorously protecting user privacy."*
@@ -7,7 +7,7 @@
 
 ## 🚀 The Zero-Knowledge Evolution
 
-Prajna 0.3 has been completely re-architected into a **Stateless, Zero-Knowledge System** backed by a modern, ultra-premium React frontend. 
+Prajna 0.2 has been completely re-architected into a **Stateless, Zero-Knowledge System** backed by a modern, ultra-premium React frontend. 
 
 The server **no longer stores your face, your identity, or your biometric vectors.** Instead, we have introduced the **Biometric Device Wallet**. When you enroll, your facial vectors are extracted mathematically, returned to your browser, and securely stored in your local `localStorage`. 
 
@@ -23,7 +23,7 @@ Every time you verify your identity, your browser temporarily transmits your bio
 
 ## 🧠 Two-Stage Hierarchical Inference
 
-Prajna 0.3 extends the adaptive uncertainty-awareness of previous versions with a **two-stage hierarchical inference pipeline** driven by a routing score. 
+Prajna 0.2 extends the adaptive uncertainty-awareness of previous versions with a **two-stage hierarchical inference pipeline** driven by a routing score. 
 
 The key question the system answers at every query:
 > *"Is Stage-1's confidence sufficient to decide, or should I spend Stage-2 compute?"*
